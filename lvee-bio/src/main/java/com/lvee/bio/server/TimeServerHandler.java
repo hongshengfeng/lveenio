@@ -1,10 +1,11 @@
-package com.lvee.bio;
+package com.lvee.bio.server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Date;
 
 /**
  * @author lveeJava
@@ -34,7 +35,8 @@ public class TimeServerHandler implements Runnable{
                         break;
                     }
                     System.out.println("receive body : " + body);
-
+                    currentTime = new Date().toString();
+                    out.println(currentTime);
                 }
             }finally {
                 if(in != null){
