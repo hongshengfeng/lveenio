@@ -22,7 +22,7 @@ public class TimeClient {
         BufferedReader in = null;
         PrintWriter out = null;
         try {
-            socket =  new Socket(IP, PORT);
+            socket = new Socket(IP, PORT);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
             out.println("Hello World, lveeJava !");
